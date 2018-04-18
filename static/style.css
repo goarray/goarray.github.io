@@ -133,13 +133,13 @@ ol li
   text-decoration: none;}
 
 #logo_text h1 a .logo_colour
-{ color: #5E4238;}
+{ color: rgb(156, 134, 126);}
 
 #logo_text a:hover .logo_colour
 { color: #5E4238;}
 
 #logo_text h2
-{ font-size: 120%;
+{ font-size: 1em;
   padding: 4px 0 0 0;
   color: #B48A7C;}
 
@@ -196,25 +196,17 @@ ul#menu li a:hover
 { float: left;
   width: 224px;}
 
-.sidebar_top
-{ width: 222px;
-  height: 14px;
-  background: transparent url(side_top.png) no-repeat;}
-
-.sidebar_base
-{ width: 222px;
-  height: 14px;
-  background: url(side_base.png) no-repeat;}
-
 .sidebar
 { float: right;
   width: 222px;
   padding: 0;
-  margin: 0 0 16px 0;}
+  margin: 0 0 16px 5px;
+  border: 1px solid rgb(90, 76, 58);
+  border-radius: 20px;
+}
 
 .sidebar_item
-{ background: url(side_back.png) repeat-y;
-  padding: 0 15px;
+{ padding: 15px 15px;
   width: 192px;}
 
 .sidebar li a.selected
@@ -364,13 +356,30 @@ ul.share-buttons .sr-only{
   text-align: center;
   background: #000;
   border-bottom: 3px solid #3d3d3d;
-  height: 40px;
+  height: 10%;
+  font-size: 1em;
+}
+
+.m-body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
 }
 
 #m-head {
   padding: 5px;
   text-decoration: none;
   color: #FFF;
+  font-size: 4em;
+}
+
+#m-h2 {
+  background: transparent url(bannerm.png) no-repeat;
+  background-size: cover;
+  color: rgb(209, 199, 172);
+  text-shadow: black 5px 5px;
+  font-weight: bold;
+  height: 10%;
+  font-size: 3em;
 }
 
 #m-span {
@@ -382,6 +391,64 @@ ul.share-buttons .sr-only{
   text-align: center;
 }
 
+#mflinks {
+  width: 100%;
+  padding-bottom: 38%;
+  border-top: 2px solid rgb(90, 76, 58);
+  border-bottom: 2px solid rgb(90, 76, 58);
+  background-color: rgb(255, 255, 255);
+}
+.m-links {
+  padding-top: 4px;
+    position: relative;
+    float: left;
+    width: 33%;
+    font-size: 1.5em;
+    overflow: hidden;
+}
+
+#sm-smicon {
+  text-decoration: none;
+}
+
+#sm-micon {
+  border-radius: 10px;
+  border: 1px solid rgb(90, 76, 58);
+  padding: 5px 5px 5px 5px;
+  text-decoration: none;
+}
+
 .m-foot {
+  position: fixed;   
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: center;
+  font-size: 1.5em;
+}
+
+.mbutt {
+  background-color: #2D2D2D;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5em;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#mtitle {
+  border-bottom: 2px solid rgb(119, 105, 87);
+}
+
+#mhead {
+  font-size: 1.5em;
+}
+
+#mdcont {
+  padding: 0px 20% 0px 20%;
+  font-size: 1.5em;
 }

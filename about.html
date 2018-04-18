@@ -2,11 +2,22 @@
 <html>
 
 <head>
-  <title>On The Level - about</title>
+  <title>On The Level</title>
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link rel="stylesheet" type="text/css" href="static/style.css" />
+  <script type="text/javascript">
+    window.onload = function () {
+      if (localStorage.getItem("hasCodeRunBefore") === null) {
+        if (screen.width <= 700) {
+          window.location = "mobile";
+        }
+        localStorage.setItem("hasCodeRunBefore", true);
+      }
+    }
+
+  </script>
 </head>
 
 <body>
@@ -14,7 +25,6 @@
     <div id="header">
       <div id="logo">
         <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
           <h1>
             <a href="index.html">On the Level
               <span class="logo_colour">handyman</span>
@@ -25,50 +35,46 @@
       </div>
       <div id="menubar">
         <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li>
-            <a href="index.html">Home</a>
+            <a href="index">Home</a>
           </li>
           <li>
-            <a href="services.html">Services</a>
+            <a href="services">Services</a>
           </li>
           <li>
-            <a href="gallery.html">Gallery</a>
-          </li>
-          <li class="selected">
-            <a href="about.html">About</a>
+            <a href="gallery">Gallery</a>
           </li>
           <li>
-            <a href="contact.html">Contact Us</a>
+            <a href="about">About</a>
+          </li>
+          <li>
+            <a href="contact">Contact Us</a>
           </li>
         </ul>
       </div>
     </div>
     <div id="content_header"></div>
     <div id="site_content">
+      <div id="banner"></div>
       <div id="sidebar_container">
         <div class="sidebar">
-          <div class="sidebar_top"></div>
           <div class="sidebar_item">
-              <!-- insert your sidebar items here -->
-              <h3>My Favorites</h3>
-              <a href="https://www.gutenberg.org/">
-                <h4>Project Gutenburg</h4>
-              </a>
-              <h5>Free eBooks</h5>
-              <a href="https://en.wikipedia.org/wiki/Special:Random">
-                <h4>Wikipedia: Random</h4>
-              </a>
-              <h5>Random wiki article</h5>
-              <a href="https://github.com">
-                <h4>Github.com</h4>
-              </a>
-              <h5>Online code Hosting</h5>
+            <h3>My Favorites</h3>
+            <a href="https://www.gutenberg.org/">
+              <h4>Project Gutenburg</h4>
+            </a>
+            <h5>Free eBooks</h5>
+            <a href="https://en.wikipedia.org/wiki/Special:Random">
+              <h4>Wikipedia: Random</h4>
+            </a>
+            <h5>Random wiki article</h5>
+            <a href="https://github.com">
+              <h4>Github.com</h4>
+            </a>
+            <h5>Online code Hosting</h5>
           </div>
-          <div class="sidebar_base"></div>
         </div>
         <div class="sidebar">
-          <div class="sidebar_top"></div>
           <div class="sidebar_item">
             <h3>Useful Links</h3>
             <ul>
@@ -86,76 +92,59 @@
               </li>
             </ul>
           </div>
-          <div class="sidebar_base"></div>
         </div>
         <div class="sidebar">
-          <div class="sidebar_top"></div>
           <div class="sidebar_item">
-              <h3>Social Media</h3>
-              <ul class="share-buttons">
-                <a id="sm-icon" href="https://facebook.com" target="_blank">
-                  <img id="sm-icon" src="style/Facebook.png" alt="example graphic" />
-                </a>
-                <a id="sm-icon" href="https://plus.google.com" target="_blank">
-                  <img id="sm-icon" src="style/Google+.png" alt="example graphic" />
-                </a>
-                <a id="sm-icon" href="https://www.instagram.com" target="_blank">
-                  <img id="sm-icon" src="style/Instagram.png" alt="example graphic" />
-                </a>
-                <a id="sm-icon" href="https://www.linkedin.com" target="_blank">
-                  <img id="sm-icon" src="style/Linkedin.png" alt="example graphic" />
-                </a></br>
-                <a id="sm-icon" href="https://reddit.com" target="_blank">
-                  <img id="sm-icon" src="style/Reddit.png" alt="example graphic" />
-                </a>
-                <a id="sm-icon" href="https://www.stumbleupon.com" target="_blank">
-                  <img id="sm-icon" src="style/Stumbleupon.png" alt="example graphic" />
-                </a>
-                <a id="sm-icon" href="https://twitter.com" target="_blank">
-                  <img id="sm-icon" src="style/Twitter.png" alt="example graphic" />
-                </a>
-                <a id="sm-icon" href="https://youtube.com" target="_blank">
-                  <img id="sm-icon" src="style/YouTube.png" alt="example graphic" />
-                </a>
-              </ul>
+            <h3>Social Media</h3>
+            <ul class="share-buttons">
+              <a id="sm-icon" href="https://facebook.com" target="_blank">
+                <img id="sm-icon" src="static/Facebook.png" alt="example graphic" />
+              </a>
+              <a id="sm-icon" href="https://plus.google.com" target="_blank">
+                <img id="sm-icon" src="static/Google+.png" alt="example graphic" />
+              </a>
+              <a id="sm-icon" href="https://www.instagram.com" target="_blank">
+                <img id="sm-icon" src="static/Instagram.png" alt="example graphic" />
+              </a>
+              <a id="sm-icon" href="https://www.linkedin.com" target="_blank">
+                <img id="sm-icon" src="static/Linkedin.png" alt="example graphic" />
+              </a>
+              </br>
+              <a id="sm-icon" href="https://reddit.com" target="_blank">
+                <img id="sm-icon" src="static/Reddit.png" alt="example graphic" />
+              </a>
+              <a id="sm-icon" href="https://www.stumbleupon.com" target="_blank">
+                <img id="sm-icon" src="static/Stumbleupon.png" alt="example graphic" />
+              </a>
+              <a id="sm-icon" href="https://twitter.com" target="_blank">
+                <img id="sm-icon" src="static/Twitter.png" alt="example graphic" />
+              </a>
+              <a id="sm-icon" href="https://youtube.com" target="_blank">
+                <img id="sm-icon" src="static/YouTube.png" alt="example graphic" />
+              </a>
+            </ul>
           </div>
-          <div class="sidebar_base"></div>
         </div>
       </div>
       <div id="content">
-        <!-- insert the page content here -->
-        <h1>About</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui.</p>
+        {{template "dindex"}}
       </div>
     </div>
-    <div id="content_footer"></div>
+    <div id="content_footer">
+    </div>
     <div id="footer">
       <p>
-        <a href="index.html">Home</a> |
-        <a href="services.html">Services</a> |
-        <a href="gallery.html">Gallery</a> |
-        <a href="about.html">About</a> |
-        <a href="contact.html">Contact</a>
+        <a href="index">Home</a> |
+        <a href="services">Services</a> |
+        <a href="gallery">Gallery</a> |
+        <a href="about">About</a> |
+        <a href="contact">Contact</a> |
+        <a href="mobile">Mobile</a>
       </p>
-      <p><a href="contact.html">Copyright &copy; William Beever</a> |
+      <p>Copyright &copy; William Beever |
         <a href="http://validator.w3.org/check?uri=referer">HTML5</a> |
         <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
-        <a href="http://www.html5webtemplates.co.uk">Simple web templates by HTML5</a>
+        <a href="https://golang.org/">GoLang</a>
       </p>
     </div>
   </div>

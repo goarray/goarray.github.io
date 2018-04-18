@@ -2,11 +2,22 @@
 <html>
 
 <head>
-  <title>On The Level - services</title>
+  <title>On The Level</title>
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link rel="stylesheet" type="text/css" href="static/style.css" />
+  <script type="text/javascript">
+    window.onload = function () {
+      if (localStorage.getItem("hasCodeRunBefore") === null) {
+        if (screen.width <= 700) {
+          window.location = "mobile";
+        }
+        localStorage.setItem("hasCodeRunBefore", true);
+      }
+    }
+
+  </script>
 </head>
 
 <body>
@@ -14,7 +25,6 @@
     <div id="header">
       <div id="logo">
         <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
           <h1>
             <a href="index.html">On the Level
               <span class="logo_colour">handyman</span>
@@ -25,32 +35,30 @@
       </div>
       <div id="menubar">
         <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li class="selected">
-            <a href="services.html">Services</a>
+            <a href="index">Home</a>
           </li>
           <li>
-            <a href="gallery.html">Gallery</a>
+            <a href="services">Services</a>
           </li>
           <li>
-            <a href="about.html">About</a>
+            <a href="gallery">Gallery</a>
           </li>
           <li>
-            <a href="contact.html">Contact Us</a>
+            <a href="about">About</a>
+          </li>
+          <li>
+            <a href="contact">Contact Us</a>
           </li>
         </ul>
       </div>
     </div>
     <div id="content_header"></div>
     <div id="site_content">
+      <div id="banner"></div>
       <div id="sidebar_container">
         <div class="sidebar">
-          <div class="sidebar_top"></div>
           <div class="sidebar_item">
-            <!-- insert your sidebar items here -->
             <h3>My Favorites</h3>
             <a href="https://www.gutenberg.org/">
               <h4>Project Gutenburg</h4>
@@ -65,12 +73,10 @@
             </a>
             <h5>Online code Hosting</h5>
           </div>
-          <div class="sidebar_base"></div>
         </div>
         <div class="sidebar">
-          <div class="sidebar_top"></div>
           <div class="sidebar_item">
-            <h3>Helpful Links</h3>
+            <h3>Useful Links</h3>
             <ul>
               <li>
                 <a href="https://www.homedepot.com/">The Home Depot</a>
@@ -86,122 +92,59 @@
               </li>
             </ul>
           </div>
-          <div class="sidebar_base"></div>
         </div>
         <div class="sidebar">
-          <div class="sidebar_top"></div>
           <div class="sidebar_item">
             <h3>Social Media</h3>
             <ul class="share-buttons">
               <a id="sm-icon" href="https://facebook.com" target="_blank">
-                <img id="sm-icon" src="style/Facebook.png" alt="example graphic" />
+                <img id="sm-icon" src="static/Facebook.png" alt="example graphic" />
               </a>
               <a id="sm-icon" href="https://plus.google.com" target="_blank">
-                <img id="sm-icon" src="style/Google+.png" alt="example graphic" />
+                <img id="sm-icon" src="static/Google+.png" alt="example graphic" />
               </a>
               <a id="sm-icon" href="https://www.instagram.com" target="_blank">
-                <img id="sm-icon" src="style/Instagram.png" alt="example graphic" />
+                <img id="sm-icon" src="static/Instagram.png" alt="example graphic" />
               </a>
               <a id="sm-icon" href="https://www.linkedin.com" target="_blank">
-                <img id="sm-icon" src="style/Linkedin.png" alt="example graphic" />
-              </a></br>
+                <img id="sm-icon" src="static/Linkedin.png" alt="example graphic" />
+              </a>
+              </br>
               <a id="sm-icon" href="https://reddit.com" target="_blank">
-                <img id="sm-icon" src="style/Reddit.png" alt="example graphic" />
+                <img id="sm-icon" src="static/Reddit.png" alt="example graphic" />
               </a>
               <a id="sm-icon" href="https://www.stumbleupon.com" target="_blank">
-                <img id="sm-icon" src="style/Stumbleupon.png" alt="example graphic" />
+                <img id="sm-icon" src="static/Stumbleupon.png" alt="example graphic" />
               </a>
               <a id="sm-icon" href="https://twitter.com" target="_blank">
-                <img id="sm-icon" src="style/Twitter.png" alt="example graphic" />
+                <img id="sm-icon" src="static/Twitter.png" alt="example graphic" />
               </a>
               <a id="sm-icon" href="https://youtube.com" target="_blank">
-                <img id="sm-icon" src="style/YouTube.png" alt="example graphic" />
+                <img id="sm-icon" src="static/YouTube.png" alt="example graphic" />
               </a>
             </ul>
           </div>
-          <div class="sidebar_base"></div>
         </div>
       </div>
       <div id="content">
-        <!-- insert the page content here -->
-        <h1>Services</h1>
-        <p>This page contains examples of all the styled elements available as part of this design. Use this page for reference,
-          whilst you build your website.</p>
-        <h2>Headings</h2>
-        <p>These are the different heading formats:</p>
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-        <!--
-        <h2>Text</h2>
-        <p>The following examples show how the text (within '&lt;p&gt;&lt;/p&gt;' tags) will appear:</p>
-        <p>
-          <strong>This is an example of bold text</strong>
-        </p>
-        <p>
-          <i>This is an example of italic text</i>
-        </p>
-        <p>
-          <a href="#">This is a hyperlink</a>
-        </p>
-        <h2>Lists</h2>
-        <p>This is an unordered list:</p>
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
-        </ul>
-        <p>This is an ordered list:</p>
-        <ol>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
-        </ol>
-        <h2>Tables</h2>
-        <p>Tables should be used to display data and not used for laying out your website:</p>
-        <table style="width:100%; border-spacing:0;">
-          <tr>
-            <th>Item</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>Item 1</td>
-            <td>Description of Item 1</td>
-          </tr>
-          <tr>
-            <td>Item 2</td>
-            <td>Description of Item 2</td>
-          </tr>
-          <tr>
-            <td>Item 3</td>
-            <td>Description of Item 3</td>
-          </tr>
-          <tr>
-            <td>Item 4</td>
-            <td>Description of Item 4</td>
-          </tr>
-        </table>
-      -->
+        {{template "dindex"}}
       </div>
     </div>
-    <div id="content_footer"></div>
+    <div id="content_footer">
+    </div>
     <div id="footer">
       <p>
-        <a href="index.html">Home</a> |
-        <a href="services.html">Services</a> |
-        <a href="gallery.html">Gallery</a> |
-        <a href="about.html">About</a> |
-        <a href="contact.html">Contact</a>
+        <a href="index">Home</a> |
+        <a href="services">Services</a> |
+        <a href="gallery">Gallery</a> |
+        <a href="about">About</a> |
+        <a href="contact">Contact</a> |
+        <a href="mobile">Mobile</a>
       </p>
-      <p><a href="contact.html">Copyright &copy; William Beever</a> |
+      <p>Copyright &copy; William Beever |
         <a href="http://validator.w3.org/check?uri=referer">HTML5</a> |
         <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
-        <a href="http://www.html5webtemplates.co.uk">Simple web templates by HTML5</a>
+        <a href="https://golang.org/">GoLang</a>
       </p>
     </div>
   </div>
